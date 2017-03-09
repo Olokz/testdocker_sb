@@ -7,7 +7,7 @@ ENV TEAMSPEAK_URL http://dl.4players.de/ts/releases/3.0.18.2/TeamSpeak3-Client-l
 
 # Download TS3 file and extract it into /opt.
 ADD ${TSBOT_URL} /opt/
-RUN cd /opt && tar -xf /opt/ts3soundboardbot*.tar.bz2
+RUN cd /opt && tar -jxvf /opt/ts3soundboardbot*.tar.bz2
 
 ADD ${TEAMSPEAK_URL} /opt/ts3soundboard/
 RUN cd /opt/ts3soundboard && chmod 0755 TeamSpeak3-Client-linux_amd64-3.0.18.2.run
